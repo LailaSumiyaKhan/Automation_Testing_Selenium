@@ -3,6 +3,7 @@ const driver = new Builder().forBrowser("chrome").build();
 
 async function execution() {
    try {
+      const productName = "Nike react phantom run flyknit 2";
       await driver.manage().window().maximize();
       await driver.get("https://demo.evershop.io/");
       // console.log("opened website");
@@ -22,17 +23,13 @@ async function execution() {
       const price = await driver
          .findElement(
             By.xpath(
-               "//div[contains(. , 'Nike react phantom run flyknit 2')]/following-sibling::div/div/span"
+               `//div[contains(. , '${productName}')]/following-sibling::div/div/span`
             )
          )
          .getText();
       console.log("price is: ", price);
       await driver
-         .findElement(
-            By.xpath(
-               "//span[contains(text(),'Nike react phantom run flyknit 2')]"
-            )
-         )
+         .findElement(By.xpath(`//span[contains(text(),'${productName}')]`))
          .click();
       // console.log("clicked on product");
       await driver.findElement(By.xpath("//a[text()='X']")).click();
