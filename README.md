@@ -2,6 +2,10 @@
 
 This project demonstrates automation of an e-commerce website using Selenium WebDriver with Node.js. The script performs the following steps:
 
+### Project Preview
+
+1. **Execution** - [Watch the video](https://youtu.be/nsmIfG_ex7I)
+
 ## Features
 
 1. **Navigate to the website**: Opens the demo e-commerce website.
